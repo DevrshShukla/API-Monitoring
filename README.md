@@ -2,6 +2,30 @@
 
 A production-grade, distributed API Monitoring & Observability platform engineered for high-availability systems, mission-critical microservices, and multi-tenant engineering teams.
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FDevrshShukla%2FAPI-Monitoring&project-name=api-monitoring-dashboard&env=VITE_API_URL)
+
+---
+
+## 🚀 Deploying to Vercel
+
+The dashboard frontend (`@api-monitoring/web`) is fully configured for zero-config Vercel deployment with pre-configured single-page app (SPA) rewrites and build manifests.
+
+### Option 1: 1-Click Deploy
+Click the button above or visit:
+[https://vercel.com/new/clone?repository-url=https://github.com/DevrshShukla/API-Monitoring](https://vercel.com/new/clone?repository-url=https://github.com/DevrshShukla/API-Monitoring)
+
+### Option 2: Connect via Vercel Dashboard
+1. Go to [vercel.com/new](https://vercel.com/new).
+2. Import the Git repository: `https://github.com/DevrshShukla/API-Monitoring`.
+3. Configure Project Settings:
+   - **Framework Preset**: `Vite`
+   - **Root Directory**: Leave as `./` (or select `apps/web` if deploying frontend exclusively)
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `apps/web/dist`
+4. Environment Variables:
+   - `VITE_API_URL`: URL of your deployed API backend (e.g., `https://api.yourdomain.com`).
+5. Click **Deploy**. Vercel will build the shared packages, compile the Vite app, and deploy it to a global edge CDN.
+
 ---
 
 ## 🌟 Key Architecture & Capabilities
