@@ -1,6 +1,11 @@
 import axios, { AxiosError, InternalAxiosRequestConfig } from 'axios';
 
-const API_BASE = '/api/v1';
+const rawBase = import.meta.env.VITE_API_URL || '';
+const API_BASE = rawBase
+  ? rawBase.endsWith('/api/v1')
+    ? rawBase
+    : `${rawBase.replace(/\/$/, '')}/api/v1`
+  : '/api/v1';
 
 export const apiClient = axios.create({
   baseURL: API_BASE,

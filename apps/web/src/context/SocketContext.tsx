@@ -28,7 +28,11 @@ export const SocketProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     }
 
     // Connect to /workspace namespace
-    const socket = io('/workspace', {
+    const rawWsUrl = import.meta.env.VITE_WS_URL || import.meta.env.VITE_API_URL || '';
+    const wsHost = rawWsUrl ? rawWsUrl.replace(/\/api\/v1\/?$/, '').replace(/\/$/, '') : '';
+    const socketEndpoint = wsHost ? `${wsHost}/workspace` : '/workspace';
+
+    const socket = io(socketEndpoint, {
       auth: {
         token,
         workspaceId: activeWorkspace.id,
