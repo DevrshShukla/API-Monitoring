@@ -1,0 +1,47 @@
+{
+  "project": "API Monitoring Dashboard",
+  "version": "1.0",
+  "generated_on": "2026-11-18",
+  "markdown_documents": [
+    "ACCEPTANCE_CRITERIA.md",
+    "API_DOCUMENTATION.md",
+    "COMPONENT_LIBRARY.md",
+    "DATABASE_DESIGN.md",
+    "DEPLOYMENT_GUIDE.md",
+    "DOCUMENTATION_AUDIT.md",
+    "PRD.md",
+    "PROJECT_ROADMAP.md",
+    "README.md",
+    "SECURITY_DOCUMENTATION.md",
+    "SYSTEM_ARCHITECTURE.md",
+    "TESTING_DOCUMENTATION.md",
+    "TRD.md",
+    "UI_UX_GUIDELINES.md",
+    "USER_ROLES_PERMISSIONS.md",
+    "WORKFLOW.md"
+  ],
+  "individual_pdfs": [
+    "ACCEPTANCE_CRITERIA.pdf",
+    "API_DOCUMENTATION.pdf",
+    "COMPONENT_LIBRARY.pdf",
+    "DATABASE_DESIGN.pdf",
+    "DEPLOYMENT_GUIDE.pdf",
+    "PRD.pdf",
+    "PROJECT_ROADMAP.pdf",
+    "SECURITY_DOCUMENTATION.pdf",
+    "SYSTEM_ARCHITECTURE.pdf",
+    "TESTING_DOCUMENTATION.pdf",
+    "TRD.pdf",
+    "UI_UX_GUIDELINES.pdf",
+    "USER_ROLES_PERMISSIONS.pdf",
+    "WORKFLOW.pdf"
+  ],
+  "combined_pdf": "API_MONITORING_DASHBOARD_COMPLETE_DOCUMENTATION.pdf",
+  "audit_pdf": "DOCUMENTATION_AUDIT.pdf",
+  "diagrams": [
+    "INCIDENT_LIFECYCLE.mmd",
+    "MONITOR_LIFECYCLE.mmd",
+    "SYSTEM_OVERVIEW.mmd"
+  ],
+  "canonical_source": "documentation/*.md"
+}

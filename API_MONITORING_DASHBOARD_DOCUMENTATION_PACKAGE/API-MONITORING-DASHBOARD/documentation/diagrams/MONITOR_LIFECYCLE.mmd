@@ -1,0 +1,13 @@
+stateDiagram-v2
+  [*] --> Unknown
+  Unknown --> Operational: successful check
+  Unknown --> Down: failure threshold
+  Operational --> Degraded: latency / success ratio
+  Operational --> Down: failure threshold
+  Degraded --> Operational: recovery window
+  Degraded --> Down: failure threshold
+  Down --> Operational: recovery window
+  Operational --> Paused: pause
+  Degraded --> Paused: pause
+  Down --> Paused: pause
+  Paused --> Unknown: resume

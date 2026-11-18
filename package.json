@@ -1,0 +1,21 @@
+{
+  "name": "api-monitoring-dashboard-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=@api-monitoring/api",
+    "dev:web": "npm run dev --workspace=@api-monitoring/web",
+    "dev:worker": "npm run worker:dev --workspace=@api-monitoring/api",
+    "dev:scheduler": "npm run scheduler:dev --workspace=@api-monitoring/api",
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}

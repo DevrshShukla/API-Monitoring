@@ -1,0 +1,7 @@
+stateDiagram-v2
+  [*] --> Open
+  Open --> Acknowledged: acknowledge
+  Acknowledged --> Investigating: investigate
+  Investigating --> Resolved: resolve with note
+  Open --> Resolved: confirmed auto-recovery
+  Resolved --> Open: new sustained event after cooldown

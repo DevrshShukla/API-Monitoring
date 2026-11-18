@@ -1,0 +1,13 @@
+flowchart LR
+  Browser[React Web App] --> API[Express API]
+  Browser <-->|Socket.IO| API
+  API --> Mongo[(MongoDB)]
+  API --> Redis[(Redis / BullMQ)]
+  Scheduler[Scheduler] --> Mongo
+  Scheduler --> Redis
+  Redis --> Worker[Monitor Worker]
+  Worker --> Guard[SSRF Guard]
+  Guard --> Target[Public API Target]
+  Worker --> Mongo
+  Redis --> Notify[Notification Worker]
+  Notify --> SMTP[SMTP Provider]
